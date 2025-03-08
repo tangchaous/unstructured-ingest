@@ -1,4 +1,5 @@
 services:
+  # Telemetry
   jaeger:
     image: jaegertracing/all-in-one:latest
     container_name: jaeger
@@ -8,7 +9,7 @@ services:
       - "14268"
       - "14250"
 
-
+  # OpenTelemetry
   otel-collector:
     image: otel/opentelemetry-collector
     container_name: otel-collector
